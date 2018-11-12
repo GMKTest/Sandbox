@@ -38,3 +38,15 @@ resource "aws_s3_bucket" "TFRemoteState" {
 	Terraform = "True"
   }
 }
+
+resource "aws_s3_bucket" "kokotekbucket" {
+  bucket = "kokotekbucket"
+  acl    = "private"
+
+  tags {
+    Name        = "kokotekbucket"
+    Environment = "Dev"
+	Company = "Test"
+	Terraform = "True"
+  }
+}
